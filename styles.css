@@ -1,0 +1,131 @@
+:root {
+    
+    --main-clr:white;
+    --secondary-clr:#1f2937;
+    --accent--clr: #3882F6;
+    --section--clr: #E5E7EB;
+
+    --light-300: light 300;
+    --light-300-italic: light 300 italic;
+    --extra-bold-900: 900;
+
+    --main-fs: 36px;
+    --secondary-fs: 24px;
+    --small-fs: 18px;
+    --heading-fs: 48px;
+
+    --primary-padding: 2em;
+    --secondary-padding: 1em 1em 2em 1em;
+    --section-padding: 5em 8em;
+    
+    box-sizing: border-box;
+
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+
+*,
+*::before
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+font-family: roboto
+}
+
+img, video {
+    width: 25em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-clr);
+}
+
+/*          nav/header         */
+
+.nav {
+    background-color: var(--secondary-clr);
+    color: var(--main-clr);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--section-padding);
+    padding-top: 2em;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+header {
+    background-color: var(--secondary-clr);
+    color: var(--section--clr);
+}
+
+/*        Main         */
+
+main {
+    background-color: var(--secondary-clr);
+    color: var(--section--clr);
+    padding: var(--section-padding);
+
+    display: flex;
+    flex: 1;
+}
+
+.main {
+    flex: 1 1 0;
+}
+
+.main-right video {
+    width: 100%;
+}
+
+/*         sections         */
+
+.section {
+    padding: var(--section-padding);
+
+}
+
+.section h3 {
+    padding: var(--primary-padding);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+    background-color: var(--main-clr);
+}
+
+.card {
+    inline-size: min-content;
+    padding: var(--secondary-padding);
+    background-color: var(--secondary-clr);
+    border-radius: 10px;
+    color: var(--main-clr);
+}
+
+.builds-sect {
+    background-color: var(--main-clr);
+}
+
+.paragraph-section {
+    background-color: var(--section--clr);
+    color: var(--secondary-clr);
+}
+
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+}
