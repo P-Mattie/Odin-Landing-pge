@@ -1,7 +1,7 @@
 :root {
     
     --main-clr:rgb(172, 172, 172);
-    --secondary-clr:#1f2937;
+    --secondary-clr: rgb(31, 41, 55);
     --accent--clr: #3882F6;
     --section--clr: rgb(133, 117, 99);
 
@@ -48,7 +48,11 @@ a {
     color: var(--main-clr);
 }
 
-.logo-span {
+.logo-span-left {
+    color: var(--main-clr);
+}
+
+.logo-span-right {
     color: var(--section--clr);
 }
 
@@ -68,7 +72,7 @@ header {
     background-color: var(--secondary-clr);
     color: var(--main-clr);
     padding: var(--section-padding);
-    
+    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,17 +121,18 @@ main {
     box-sizing: border-box;
     padding-right: 2em;
     color: var(--section--clr);
-    border: 2px solid rgba(133, 117, 99, 0.5);
     border-right: none;
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-items:self-end;
+    background-image: linear-gradient(to right, var(--section--clr) -300%, var(--secondary-clr) 100%);
 }
 
 .main-left p {
     width: 80%;
     text-align: right;
+    color: var(--main-clr);
 }
 
 .main-right video {
@@ -156,14 +161,22 @@ main {
 .builds-sect {
     background-color: var(--main-clr);
     font-size: var(--secondary-fs);
-    width: 80%;
-    margin: 0 auto;
+    padding: 2em 7em;
+    text-transform: uppercase;
+    background-image: linear-gradient(to top, var(--section--clr) 70%, var(--secondary-clr) 100%);
+
 }
 
 .builds-sect h3 {
-    padding-bottom: var(--primary-padding);
-    font-size: var(--secondary-fs);
+    color: var(--main-clr);
+    font-size: var(--large-fs);
+    border: var(--main-clr) solid 2px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1em auto;
+    padding: .5em 1em;
 }
+
 
 .cards {
     display: flex;
@@ -171,7 +184,7 @@ main {
     gap: 2em;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-clr);
+    background-color: none;
 }
 
 
@@ -179,7 +192,7 @@ main {
 .card {
     inline-size: min-content;
     padding: var(--cards-padding);
-    background-color: var(--secondary-clr);
+    background:radial-gradient( var(--section--clr) 40%, var(--secondary-clr) 100%);
     border-radius: 10px;
     color: var(--main-clr);
 }
