@@ -48,6 +48,10 @@ a {
     color: var(--main-clr);
 }
 
+.logo-span {
+    color: var(--main-clr);
+}
+
 
 /*          nav/header         */
 
@@ -66,6 +70,7 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 3em;
+    font-size: 20px;
 }
 
 header {
@@ -89,10 +94,10 @@ main {
 }
 
 .main-left {
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding-right: 2em;
     color: rgb(133, 117, 99);
-    border: 7px double rgba(133, 117, 99, 0.5);
+    border: 2px solid rgba(133, 117, 99, 0.5);
     border-right: none;
     display: flex;
     flex-direction: column;
@@ -107,6 +112,8 @@ main {
 
 .main-right video {
     width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 .img-blend {
