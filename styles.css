@@ -167,21 +167,25 @@ main {
 
 }
 
-.builds-sect h3 {
+.builds-cta {
     color: var(--main-clr);
     font-size: var(--large-fs);
     border: var(--main-clr) solid 2px;
     display: block;
     width: fit-content;
-    margin: 0 auto 1em auto;
+    margin: 0 auto 1.6em auto;
     padding: .5em 1em;
 }
 
+.builds-cta:hover {
+    font-size: 1.8em;
+    margin-bottom: 1.31em;
+}
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 1em;
     justify-content: center;
     align-items: center;
     background-color: none;
