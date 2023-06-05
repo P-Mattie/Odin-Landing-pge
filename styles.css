@@ -1,9 +1,9 @@
 :root {
     
-    --main-clr:white;
+    --main-clr:rgb(172, 172, 172);
     --secondary-clr:#1f2937;
     --accent--clr: #3882F6;
-    --section--clr: #E5E7EB;
+    --section--clr: rgb(133, 117, 99);
 
     --light-300: light 300;
     --light-300-italic: light 300 italic;
@@ -16,7 +16,8 @@
 
     --primary-padding: 2em;
     --secondary-padding: 1em 1em 2em 1em;
-    --section-padding: 5em 8em;
+    --section-padding: 2em 7em;
+    --main-padding: 6em 2em 2em 7em;
     
     box-sizing: border-box;
 
@@ -47,6 +48,7 @@ a {
     color: var(--main-clr);
 }
 
+
 /*          nav/header         */
 
 .nav {
@@ -57,6 +59,7 @@ a {
     padding: var(--section-padding);
     padding-top: 2em;
     align-items: center;
+    
 }
 
 nav {
@@ -75,7 +78,7 @@ header {
 main {
     background-color: var(--secondary-clr);
     color: var(--section--clr);
-    padding: var(--section-padding);
+    padding: var(--main-padding);
 
     display: flex;
     flex: 1;
@@ -85,8 +88,35 @@ main {
     flex: 1 1 0;
 }
 
+.main-left {
+    box-sizing: content-box;
+    padding-right: 2em;
+    color: rgb(133, 117, 99);
+    border: 7px double rgba(133, 117, 99, 0.5);
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items:self-end;
+}
+
+.main-left p {
+    width: 80%;
+    text-align: right;
+}
+
 .main-right video {
     width: 100%;
+}
+
+.img-blend {
+    outline: var(--secondary-clr) double 10px;
+    position: relative;
+    height: 80%;
+    bottom: 90%;
+    width: 80%;
+    left: 10%;
+
 }
 
 /*         sections         */
