@@ -5,21 +5,22 @@
     --accent--clr: #3882F6;
     --section--clr: rgb(133, 117, 99);
 
-    --light-300: light 300;
-    --light-300-italic: light 300 italic;
-    --extra-bold-900: 900;
+    --light: light 300;
+    --light-italic: light 300 italic;
+    --medium: 500;
+    --extra-bold: 900;
 
-    --main-fs: 36px;
-    --secondary-fs: 24px;
-    --small-fs: 18px;
-    --heading-fs: 48px;
+    --main-fs: 1.6rem;
+    --secondary-fs: 1.8rem;
+    --large-fs: 3rem;
 
-    --primary-padding: 2em;
-    --secondary-padding: 1em 1em 2em 1em;
-    --section-padding: 2em 7em;
-    --main-padding: 6em 2em 2em 7em;
+    --primary-padding: 2rem;
+    --cards-padding: 1.5rem 1.5rem 2rem 1.5rem;
+    --section-padding: 4rem 7rem;
+    --main-padding: 6rem 7rem 2rem 7rem;
     
     box-sizing: border-box;
+    font-size: 62.5%;
 
 }
 
@@ -27,7 +28,6 @@
     margin:0;
     padding:0;
 }
-
 
 *,
 *::before
@@ -49,41 +49,61 @@ a {
 }
 
 .logo-span {
-    color: var(--main-clr);
+    color: var(--section--clr);
 }
 
+.logo {
+    font-size: var(--large-fs);
+    font-weight: var(--extra-bold);
+}
+
+body {
+    background-color: var(--main-clr);
+}
 
 /*          nav/header         */
 
-.nav {
+header {
+    
     background-color: var(--secondary-clr);
     color: var(--main-clr);
+    padding: var(--section-padding);
+    
     display: flex;
     justify-content: space-between;
-    padding: var(--section-padding);
-    padding-top: 2em;
     align-items: center;
     
 }
 
 nav {
+
+    font-weight: var(--medium);
+    font-size: var(--secondary-fs);
+
     display: flex;
     justify-content: space-between;
     gap: 3em;
-    font-size: 20px;
 }
 
-header {
-    background-color: var(--secondary-clr);
+nav a:hover{
     color: var(--section--clr);
+    border-bottom: var(--section--clr) solid 2px ;
+    margin-top: -2px;
 }
+
+.nav-active {
+    color: var(--section--clr);
+    border-bottom: var(--section--clr) solid 2px ;
+}
+
 
 /*        Main         */
 
 main {
     background-color: var(--secondary-clr);
     color: var(--section--clr);
-    padding: var(--main-padding);
+    padding: var(--section-padding);
+    font-size: var(--main-fs);
 
     display: flex;
     flex: 1;
@@ -96,7 +116,7 @@ main {
 .main-left {
     box-sizing: border-box;
     padding-right: 2em;
-    color: rgb(133, 117, 99);
+    color: var(--section--clr);
     border: 2px solid rgba(133, 117, 99, 0.5);
     border-right: none;
     display: flex;
@@ -133,28 +153,35 @@ main {
 
 }
 
-.section h3 {
-    padding: var(--primary-padding);
+.builds-sect {
+    background-color: var(--main-clr);
+    font-size: var(--secondary-fs);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.builds-sect h3 {
+    padding-bottom: var(--primary-padding);
+    font-size: var(--secondary-fs);
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 1em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
     background-color: var(--main-clr);
 }
+
+
 
 .card {
     inline-size: min-content;
-    padding: var(--secondary-padding);
+    padding: var(--cards-padding);
     background-color: var(--secondary-clr);
     border-radius: 10px;
     color: var(--main-clr);
-}
-
-.builds-sect {
-    background-color: var(--main-clr);
 }
 
 .paragraph-section {
