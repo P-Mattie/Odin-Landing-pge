@@ -72,7 +72,6 @@ header {
     background-color: var(--secondary-clr);
     color: var(--main-clr);
     padding: var(--section-padding);
-    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,6 +106,7 @@ main {
     background-color: var(--secondary-clr);
     color: var(--section--clr);
     padding: var(--section-padding);
+    padding-top: 0;
     font-size: var(--main-fs);
 
     display: flex;
@@ -126,7 +126,11 @@ main {
     flex-direction: column;
     justify-content:center ;
     align-items:self-end;
-    background-image: linear-gradient(to right, var(--section--clr) -300%, var(--secondary-clr) 100%);
+    background-image: linear-gradient(to right, var(--section--clr) -400%, var(--secondary-clr) 100%);
+}
+
+.main-left:hover {
+    background-image: linear-gradient(to right, var(--section--clr) -400%, var(--secondary-clr) 80%);
 }
 
 .main-left p {
@@ -163,35 +167,67 @@ main {
     font-size: var(--secondary-fs);
     padding: 2em 7em;
     text-transform: uppercase;
-    background-image: linear-gradient(to top, var(--section--clr) 70%, var(--secondary-clr) 100%);
-
+    background-image: linear-gradient(to top, var(--section--clr) 60%, var(--secondary-clr) 101%);
+    font-size: var(--large-fs);
+    margin: 0 auto 1.6em auto;
+    padding: .5em 1em;
 }
+
+.builds-sect h3 {
+        color: var(--main-clr);
+        font-size: var(--large-fs);
+        border: var(--main-clr) solid 2px;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 1em auto;
+        margin: 0 auto 1.6em auto;
+        padding: .5em 1em;
+    }
 
 .builds-cta {
     color: var(--main-clr);
     font-size: var(--large-fs);
     border: var(--main-clr) solid 2px;
     display: block;
-    width: fit-content;
-    margin: 0 auto 1.6em auto;
-    padding: .5em 1em;
+    padding: var(--section-padding);
 }
+
 
 .builds-cta:hover {
-    font-size: 1.8em;
-    margin-bottom: 1.31em;
+    font-size: 1.1em;
 }
 
-.cards {
+.cars-cards, .meets-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-    align-items: center;
-    background-color: none;
 }
 
+.meets-cards {
+ margin-top: 2em;   
+}
 
+.card {
+}
+
+.card:hover {
+
+    transition-duration: .7s;
+    padding-top: 175px;
+    
+}
+
+.center-cards-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img, video{
+    width: 15em; 
+}
 
 .card {
     inline-size: min-content;
@@ -199,6 +235,7 @@ main {
     background:radial-gradient( var(--section--clr) 40%, var(--secondary-clr) 100%);
     border-radius: 10px;
     color: var(--main-clr);
+    width: 15em;
 }
 
 .paragraph-section {
